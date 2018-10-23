@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/*
+	Project: Loja Base VTEX
+	Author: e-can
+	Version: 1.2
+*/
+
+//Frameworks CSS and settings
+@import "bourbon";
+@import "neat-helpers";
+@import "../scss/base/_config";
+@import "neat";
+
+//base
+@import "../scss/base/_base";
+@import "../scss/base/_fonts";
+
+//layouts
+@import "../scss/components/_components";
+
+//pages
+@import "../scss/pages/_pages";

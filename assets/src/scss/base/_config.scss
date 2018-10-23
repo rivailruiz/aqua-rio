@@ -1,0 +1,127 @@
+/************************************
+
+//COMO ESCREVER E ORGANIZAR O CÓDIGO
+
+
+--- CLASSES ---
+
+Seguir modelo lowerCamelCase
+
+ex: nomeClassTeste
+
+
+--- ORDENAÇÃO DAS PROPRIEDADES ---
+
+.item {
+   // Position
+   position: absolute;
+   top: 50%;
+
+   // Block 
+   display: block;
+   border: 1px solid #000;
+   box-shadow: 1px 1px #000;
+   border-radius: 6px;
+
+   // Cores
+   background-color: #fff;
+   color: #000;
+
+   // Text
+   font: 14px arial, sans-serif #fff;
+   text-align: center;
+}
+
+
+--- REGRAS IMPORTANTES ---
+
+1. Tab com 4 espaços;
+
+2. Propriedades em linhas separadas, espaço entre o valor da propriedade e os ":" e vírgula depois do último valor.
+Ex certo:
+body {
+   background-color: #fff;
+   color: #000;
+}
+Ex errado:
+body{background-color: #fff;color: #000}
+
+3. Usar sempre aspas duplas
+Ex certo:
+a[href$=".com"]
+background-image: url("/images/image.png");
+content: "";
+
+Ex errado:
+a[href$=.com]
+background-image: url('/images/image.png');
+content: '';
+
+4. Evitar repetição de propriedades;
+Ex certo:
+margin: 10px 0 5px;
+
+Ex errado:
+margin-top: 10px;
+margin-bottom: 5px;
+
+
+************************************/
+
+
+//----------------------- 
+
+//PRIMARY VARIABLES
+
+//-----------------------
+
+//color pallete
+$color1: #f8da13;
+$color2: #e07b21;
+$color3: #996100;
+$color4: #1455ff;
+$color5: #08cfea;
+
+//grey scale
+$black: rgb(0,0,0); //#000000
+$darkergrey: tint($black, 10%); //#191919
+$darkgrey: tint($black, 25%); //#3f3f3f
+$midgrey: tint($black, 50%); //#7f7f7f
+$lightgrey: tint($black, 75%); //#bfbfbf
+$lightergrey: tint($black, 90%); //#e5e5e5
+$evenlightergrey: tint($black, 94.5%); //#f0f0f0
+$white: rgb(255,255,255); //#ffffff
+
+//fonts
+$primaryFont: 'Baloo', sans-serif;
+$secondaryFont: 'Open Sans', sans-serif;
+
+
+//----------------------
+
+//DEFINES GRID
+
+//-----------------------
+// $visual-grid: true;
+$visual-grid-color: #81bcac;
+$column: 94.1666px;
+$gutter: 10px;
+$grid-columns: 12;
+
+$max-width: 1240px !global;
+
+//----------------------
+
+//DEFINES BREAKPOINTS
+
+//-----------------------
+// Bourbon Neat Breakpoints
+$mobile-size:720px; // entre 768 e 320
+$tablet-size:1024px; // entre 960 e 720
+$desktop-size:1240px; // entre 1049 e 960
+$largedesktop-size:1241px; // entre x e 1281
+
+$largedesktop: new-breakpoint(min-width $largedesktop-size 12);
+$desktop: new-breakpoint(max-width $desktop-size 12);
+$tablet: new-breakpoint(max-width $tablet-size 8);
+$mobile: new-breakpoint(max-width $mobile-size 4);

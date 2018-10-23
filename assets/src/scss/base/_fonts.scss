@@ -1,0 +1,93 @@
+/*fonts*/
+@font-face {
+  font-family: 'olxIcon';
+  src:  url('olxIcon.eot?kd5sgv');
+  src:  url('olxIcon.eot?kd5sgv#iefix') format('embedded-opentype'),
+    url('olxIcon.ttf?kd5sgv') format('truetype'),
+    url('olxIcon.woff?kd5sgv') format('woff'),
+    url('olxIcon.svg?kd5sgv#olxIcon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'olxIcon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-android:before {
+  content: "\e901";
+}
+.ico-apple:before {
+  content: "\e902";
+}
+.ico-cars:before {
+  content: "\e903";
+}
+.ico-chart:before {
+  content: "\e904";
+}
+.ico-clothes:before {
+  content: "\e906";
+}
+.ico-eletronics:before {
+  content: "\e907";
+}
+.ico-facebook:before {
+  content: "\e908";
+}
+.ico-fitment:before {
+  content: "\e909";
+}
+.ico-gplus:before {
+  content: "\e90a";
+}
+.ico-grafic:before {
+  content: "\e90b";
+}
+.ico-hand-click:before {
+  content: "\e90c";
+}
+.ico-home-appliances:before {
+  content: "\e90d";
+}
+.ico-instagram:before {
+  content: "\e90e";
+}
+.ico-menu:before {
+  content: "\e90f";
+}
+.ico-public:before {
+  content: "\e911";
+}
+.ico-ranking:before {
+  content: "\e912";
+}
+.ico-realty:before {
+  content: "\e913";
+}
+.ico-talk:before {
+  content: "\e914";
+}
+.ico-twitter:before {
+  content: "\e915";
+}
+.ico-arrow:before {
+  content: "\e900";
+}
+.ico-close:before {
+  content: "\e905";
+}
+.ico-youtube:before {
+  content: "\e910";
+}

@@ -1,0 +1,23 @@
+/*buttons*/
+@mixin primaryButton(){
+}
+
+@mixin secondaryButton(){
+}
+
+@mixin secondaryButton($background,$padding,$border,$color,$fontSize,$fontWeight,$radius,$backgroundHover,$colorHover){
+	background: $background;
+	padding: $padding;
+	border: $border;
+	color: $color;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	@include border-radius($radius);
+	@include appearance(none);
+	@include transition(all .3s ease);
+
+	&:hover {
+		background: $backgroundHover;
+		color: $colorHover;
+	}
+}

@@ -1,0 +1,21 @@
+/*titles*/
+@mixin pageTitle (){
+}
+
+@mixin sectionTitle(){
+	font-size: 42px;
+	font-family: $secondaryFont;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 100px;
+}
+
+@mixin subTitle(){
+	font-size: 60px;
+	font-family: $primaryFont;
+	color: $color5;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 70px;
+}

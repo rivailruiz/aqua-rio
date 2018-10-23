@@ -1,0 +1,81 @@
+//-----------------------
+
+//MIXINS FUNCTIONS
+
+//-----------------------
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+
+}
+
+//@include opacity(0.65);
+@mixin opacity($opacity) {
+	opacity:$opacity;
+	-moz-opacity: $opacity;
+	filter: alpha(opacity=$opacity*100);
+}
+
+
+//@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+@mixin box-shadow($shadows...) {
+  -webkit-box-shadow: $shadows;
+     -moz-box-shadow: $shadows;
+          box-shadow: $shadows;
+}
+
+//@include box sizing
+@mixin box-sizing($border) {
+  -webkit-box-sizing: $border;
+     -moz-box-sizing: $border;
+          box-sizing: $border;
+}
+
+//@include background-size(cover, auto, px px...)
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+     -moz-background-size: $size;
+      -ms-background-size: $size;
+       -o-background-size: $size;
+          background-size: $size;
+}
+//@include apparence()
+@mixin apparence($value) {
+    -webkit-appearance: $value;
+       -moz-appearance: $value;
+            appearance: $value;
+}
+
+
+//@include placeholderColor(#000)
+@mixin placeholderColor($color) {
+  input[type=text]::-webkit-input-placeholder {color: $color;font-weight:300;}
+  input[type=password]::-webkit-input-placeholder {color: $color;font-weight:300;}
+  input[type=text]:-moz-placeholder {color: $color;font-weight:300;}/* Firefox 18- */
+  input[type=password]:-moz-placeholder {color: $color;font-weight:300;}/* Firefox 18- */
+  input[type=text]::-moz-placeholder {color: $color;font-weight:300;}/* Firefox 19+ */
+  input[type=password]::-moz-placeholder {color: $color;font-weight:300;}/* Firefox 19+ */
+  input[type=text]:-ms-input-placeholder {color: $color;font-weight:300;}
+  input[type=password]:-ms-input-placeholder {color: $color;font-weight:300;}
+
+}
