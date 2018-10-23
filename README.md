@@ -1,7 +1,7 @@
-# Aplicação Processo Seletivo OLX - Front-end #
+# AquaRio #
 ***
 ## Autor ##
-**Guilherme Borzoni de Paula Pereira**
+**Alexander Rivail Ruiz Martins**
 Linkedin: https://www.linkedin.com/in/guilherme-borzoni/
 
 ## Setup ##
