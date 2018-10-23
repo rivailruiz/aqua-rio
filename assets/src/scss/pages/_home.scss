@@ -154,6 +154,8 @@ body.landing-page {
 
 	}
 
+
+
 	.fourth {
 		.left {
 			@include span-columns(6);
@@ -185,6 +187,112 @@ body.landing-page {
 				height: auto;
 				padding: 40px;
 			}
+		}
+	}
+
+	.fifth {
+		h1 {
+			@include sectionTitle();
+		}
+		h2 {
+			@include subTitle();
+		}
+		.left {
+			@include span-columns(6);
+			img {
+				width: 100%;
+				height: auto;
+				padding: 40px;
+			}
+		}
+		.right {
+			@include span-columns(6);
+			h1{
+				font-size: 94px;
+				font-family: $primaryFont;
+				color: $color6;			
+				padding: 0;
+			}
+			h2{
+				font-size: 36px;
+				font-family: $secondaryFont;	
+				color: black;
+				margin: 0;		
+			}
+			.dot {
+				font-family: $secondaryFont;	
+			    font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+
+	}
+
+
+
+	.sixth {
+		.left {
+			@include span-columns(6);
+			text-align: center;
+			text-transform: uppercase;
+			h2{
+				font-size: 36px;
+				font-family: $secondaryFont;	
+				color: black;
+				margin: 0;	
+			}
+			h1{
+				font-size: 94px;
+				font-family: $primaryFont;
+				color: #ffb71d;			
+				padding: 0;
+			}
+			.dot {
+				font-family: $secondaryFont;	
+			    font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+		.right {
+			@include span-columns(6);
+			img {
+				width: 100%;
+				height: auto;
+				padding: 40px;
+			}
+		}
+	}
+
+
+	.seventh {
+		
+		h1 {
+			text-align: center;
+			padding: 0 120px;
+			font-size: 39px;
+			font-family: $secondaryFont;
+			text-transform: uppercase;
+			line-height: 60px;
+			strong {
+				font-family: $primaryFont;
+				color: $color5;
+				font-size: 55px;
+			}
+			span {
+				font-size: 43px;
+			}
+		}
+	}
+
+	.pageFooter {
+		bottom: 0;
+		margin-top: 50px;
+		img{
+			width: 100%;
+			height: auto;
+			position: absolute;
 		}
 	}
 
