@@ -9,7 +9,6 @@
     <title>Aqua Rio</title>
 
     <link href="https://fonts.googleapis.com/css?family=Baloo|Open+Sans" rel="stylesheet">
-    <link rel="shortcut icon" href="http://static.bn-static.com/img-46872/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/build/arquivos/style.css">
 </head>
 
@@ -21,13 +20,18 @@
                 <div class="title">
                     <h1>um mergulho único <br> no universo marinho</h1>
                 </div>
-                <div class="logo">
-                    <img src="../assets/build/arquivos/logo.png" alt="logo">
+                <div class="wrapper">
+                    <div class="left">
+                        <div class="logo">
+                            <img src="../assets/build/arquivos/logo.png" alt="logo">
+                        </div>    
+                    </div>
+                    <div class="right">
+                        <div class="botao">
+                            <button>COMPRE SEU BILHETE HOJE!</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="botao">
-                    <button>COMPRE SEU BILHETE HOJE!</button>
-                </div>
-                
             </div>
         </header>
         <!-- HEADER -->
@@ -41,37 +45,49 @@
                     <div class="right">
                         <h1>educação,
                         conservação
-                        e pesquisa.</h1>
-                        <p>são os pilares do maior aquario marinho da américa do sul</p>
+                        <br>e pesquisa.</h1>
+                        <p>são os pilares do maior aquário marinho da américa do sul</p>
                         <p class="dot">. . .</p>
                     </div>
                 </div>
             </section>
 
             <section class="second">
+                <div id="top-image">
+                        <!-- <div class="bg">
+                            <img src="../assets/build/arquivos/sect-2.png" alt="">
+                        </div> -->
+                        
+                </div>
                 <div class="wrapper">
-                    <div class="bg">
-                        <img src="../assets/build/arquivos/sect-2.png" alt="">
+                    <div class="sub">
+                        <div class="video">
+                            <iframe  src="https://www.youtube.com/embed/5ptD0s66uFY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>    
                     </div>
-                    <div class="video">
-                        <!-- <iframe  src="https://www.youtube.com/embed/5ptD0s66uFY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                    </div>
+                    
+                    
                 </div>
             </section>
 
             <section class="third">
                 <div class="wrapper">
-                    <h1>Uma experiência inesquecível</h1>
-                    <h2>no AquaRio você encontra:</h2>
-                    <div class="left">
-                        <img src="../assets/build/arquivos/p2.png" alt="">
+                    <div class="titulos">
+                        <h1>Uma experiência inesquecível</h1>
+                        <h2>no AquaRio você encontra:</h2>
                     </div>
-                    <div class="right">
-                        <h2>tanque ocêanico de</h2>
-                        <h1>4.000.000</h1>
-                        <h2>Litros de água</h2>
-                        <p class="dot">. . .</p>
+                    <div class="sub-third">
+                        <div class="left">
+                            <img src="../assets/build/arquivos/p2.png" alt="">
+                        </div>
+                        <div class="right">
+                            <h2>tanque ocêanico de</h2>
+                            <h1>4.000.000</h1>
+                            <h2>Litros de água</h2>
+                            <p class="dot">. . .</p>
+                        </div>    
                     </div>
+                    
                 </div>
             </section>
 
@@ -106,7 +122,7 @@
             <section class="sixth">
                 <div class="wrapper">
                     <div class="left">
-                        <h1>5.000</h1>
+                        <h1>exposições incríveis</h1>
                         <h2>animais e cerca de 350
                         espécies distribuídos
                         por todo o circuito</h2>
@@ -128,17 +144,65 @@
             </section>
             
         </div><!-- /mainContent-->
-
-        <!-- FOOTER -->
-        <footer class="pageFooter">
-            <img src="../assets/build/arquivos/footer.png" alt="">
+        <div class="voltar">
             
+        </div>
+        <!-- FOOTER -->
+        <footer>
+            <div class="pageFooter">
+                <img src="../assets/build/arquivos/footer.png">
+                <div class="voltar">
+                    
+                    <button class="goto-top">Voltar ao topo</button>
+                </div>
+            </div>
         </footer>
+
         <!-- FOOTER -->
 
     </div><!--/all-->
     
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="../assets/build/arquivos/main.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(window).scroll(function() {
+             if ($(this).scrollTop() > 200) {
+                    $('.goto-top').fadeIn();
+                } else {
+                    $('.goto-top').fadeOut();
+                }   
+            })
+
+            $(".goto-top").on('click', function () {
+                $("html, body").animate({scrollTop: 0}, 400);
+            });
+
+            
+
+            var moveForce = 20; // max popup movement in pixels
+            var rotateForce = 10; // max popup rotation in deg
+            var negativeMargin = 40;
+
+            $(document).mousemove(function(e) {
+                var docX = $(document).width();
+                var docY = $(document).height();
+                
+                var moveX = (e.pageX - docX/2) / (docX/2) * -moveForce;
+                var moveY = (e.pageY - docY/2) / (docY/2) * -moveForce;
+                
+                var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
+                var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+                
+                $('#top-image')
+                    .css('left', (moveX - negativeMargin) +'px')
+                    .css('top', (moveY - negativeMargin) +'px')
+                    .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
+            });
+        });
+
+        
+    </script>
+    <!-- <script src="../assets/build/arquivos/main.min.js"></script> -->
 </body>
 </html>
