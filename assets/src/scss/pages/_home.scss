@@ -14,6 +14,9 @@ body.landing-page {
 			.left {
 				@include span-columns(6);
 				text-align: center;
+				@include media($mobile) {
+					@include span-columns(2);
+				}
 			}
 			.right {
 				@include span-columns(3);
@@ -87,10 +90,23 @@ body.landing-page {
 				height: auto;
 				padding: 40px;
 			}
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 		}
 		.right {
 			@include span-columns(6);
 			padding: 40px;
+			@include media($mobile) {
+				@include span-columns(4);
+				h1 {
+					font-size: 38px;
+				}
+				p {
+					font-size: 14px;
+				}
+
+			}
 			h1 {
 				font-size: 70px;
 				color: $color4;
@@ -120,6 +136,7 @@ body.landing-page {
 					font-size: 18px;
 				}
 			}
+			
 		}
 	}
 
@@ -171,6 +188,8 @@ body.landing-page {
 		.titulos {
 			height: 158px;
 			margin-top: 50px;
+
+
 		}
 		h1 {
 			font-size: 42px;
@@ -181,6 +200,9 @@ body.landing-page {
 			@include media($tablet) {
 				font-size: 32px;
 			}
+			@include media($mobile) {
+				font-size: 24px;	
+			}
 		}
 		h2 {
 			font-size: 60px;
@@ -190,6 +212,9 @@ body.landing-page {
 			text-align: center;
 			@include media($tablet) {
 				font-size: 46px;
+			}
+			@include media($mobile) {
+				font-size: 32px;	
 			}
 		}
 		.sub-third {
@@ -202,9 +227,21 @@ body.landing-page {
 				height: auto;
 				padding: 40px;
 			}
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 		}
 		.right {
 			@include span-columns(6);
+			@include media($mobile) {
+				@include span-columns(4);
+				h1 {
+					font-size: 43px;
+				}
+				h2 {
+					font-size: 13px;
+				}
+			}
 			display: flex;
 		    height: 393px;
 		    flex-direction: column;
@@ -242,8 +279,27 @@ body.landing-page {
 
 	.fourth {
 		height: 393px;
+		@include media($mobile) {
+			.wrapper {
+				height: 420px;
+				display: flex;
+				flex-direction: column-reverse;
+				// .left, .right {
+				// 	@include span-columns(4);		
+				// }				
+			}
+		}
 		.left {
 			@include span-columns(6);
+			@include media($mobile) {
+				@include span-columns(4);
+				h1 {
+					font-size: 43px;
+				}
+				h2 {
+					font-size: 13px;
+				}
+			}
 			text-align: center;
 			text-transform: uppercase;
 			display: flex;
@@ -278,6 +334,9 @@ body.landing-page {
 		}
 		.right {
 			@include span-columns(6);
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 			
 			img {
 				width: 100%;
@@ -288,6 +347,7 @@ body.landing-page {
 	}
 
 	.fifth {
+		
 		h1 {
 			font-size: 42px;
 			font-family: $secondaryFont;
@@ -311,6 +371,9 @@ body.landing-page {
 		}
 		.left {
 			@include span-columns(6);
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 			img {
 				width: 100%;
 				height: auto;
@@ -319,6 +382,10 @@ body.landing-page {
 		}
 		.right {
 			@include span-columns(6);
+			@include media($mobile) {
+				@include span-columns(4);
+				height: 130px;
+			}
 			text-align: center;
 			text-transform: uppercase;
 			display: flex;
@@ -357,8 +424,20 @@ body.landing-page {
 
 
 	.sixth {
+		
+		@include media($mobile) {
+			.wrapper {
+				display: flex;
+				flex-direction: column-reverse;
+				justify-content: center;
+				.left, .right {
+					@include span-columns(4);		
+				}
+			}
+		}
 		.left {
 			@include span-columns(6);
+			
 			text-align: center;
 			text-transform: uppercase;
 			text-align: center;
@@ -396,6 +475,9 @@ body.landing-page {
 		}
 		.right {
 			@include span-columns(6);
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 			img {
 				width: 100%;
 				height: auto;
@@ -469,6 +551,32 @@ body.landing-page {
 
 		}
 	}
-	
+	.botao {
+	    -webkit-box-shadow: 1px 50px 110px -12px rgba(0,0,0,0.43);
+	    -moz-box-shadow: 1px 50px 110px -12px rgba(0,0,0,0.43);
+	    box-shadow: 1px 50px 110px -12px rgba(0,0,0,0.43);
+	}
+	.botaoFlutua {
+		position: fixed;
+	    right: 0;
+	    z-index: 9999;
+	    width: 100%;
+	    height: 86px;
+	    text-align: right;
+	    background: white;
+	    padding: 30px 0;
+	    top: 0;
+	    button {
+			font-size: 19px;
+	    }
+	}
+
+	.botaoFlutuante {
+		font-size: 19px !important;
+	    position: absolute !important;
+	    top: 10px !important;
+	    right: 10px !important;
+	    padding: 11px !important;
+	}
 
 }
