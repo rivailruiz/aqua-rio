@@ -267,7 +267,9 @@ body.landing-page {
 				font-size: 46px;
 			}
 			@include media($mobile) {
-				font-size: 32px;	
+				font-size: 32px;
+				line-height: 31px;
+    			margin-top: 20px;	
 			}
 		}
 		.sub-third {
